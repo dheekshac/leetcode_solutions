@@ -1,0 +1,19 @@
+class Solution {
+public:
+    bool isArraySpecial(vector<int>& nums) {
+        bool flag = true;
+        if(nums.size()==1) return true;
+        for(int i=1;i<nums.size();i++){
+            if(nums[i]%2==0&&nums[i-1]%2==0||nums[i]%2!=0&&nums[i-1]%2!=0){
+                flag=false;
+            }
+        }
+        if(flag==true){
+             return true;
+        }
+        else{
+            return false;
+        } 
+        
+    }
+};
